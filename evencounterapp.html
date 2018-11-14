@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Even Counter App</title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <div id="pair"></div>
+
+
+
+        <script type="text/jsx">
+        
+        class Counter extends React.Component{
+            constructor(props){
+                super(props)
+                this.state = {count: 0}
+                this.clickHandler = this.clickHandler.bind(this)
+            }
+            clickHandler(){
+                this.setState({count: this.state.count + 2})
+            }
+            
+            render(){
+                return (
+                    <h1>Even Counter : <button onClick = {this.clickHandler}> {this.state.count} </button> </h1>
+                );
+            }
+        }
+
+
+    ReactDOM.render(<Counter/>, document.getElementById('pair'));
+    </script>
+    </body>
+    
+</html>

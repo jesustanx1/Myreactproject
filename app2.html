@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>Practise-work</title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <div id="pair"></div>
+
+
+
+
+        <!--function Feature(props){
+            
+            return <h1>This feature is {props.active?"ON":"OFF"}</h1>
+            
+        }
+        ReactDOM.render(<Feature active = {true}/>, document.getElementById('pair'));
+        --------------------------------------------------------------------------------
+        class Welcome extends React.Component{
+           render(){
+            return (
+                <h1>{this.props.active}</h1>
+            );
+           }
+        }
+        ReactDOM.render(<Welcome active = "I am a developer"/>, document.getElementById('pair'));
+        -----------------------------------------------------------------------------------------
+        class Counter extends React.Component{
+                constructor(props){
+                    super(props)
+                    this.state = {count: 0}
+                    this.clickHandler = this.clickHandler.bind(this)
+                }
+                clickHandler(){
+                    this.setState({count: this.state.count + 2})
+                }
+                
+                render(){
+                    return(
+                        <h1>Even Counter: <button onClick={this.clickHandler}>{this.state.count}</button></h1>
+                            );
+                }
+            }
+
+
+        ReactDOM.render(<Counter/>, document.getElementById('pair'));
+        ------------------------------------------------------------------------
+        class Counter extends React.Component{
+           constructor(props){
+               super(props)
+               this.state = {count: 0}
+               this.clickHandler = this.clickHandler.bind(this)
+           }
+           clickHandler(){
+                this.setState({ count: this.state.count + 3})
+           }
+
+
+
+           render(){
+               return (
+                <h1>Three multiples Counter: <button onClick = {this.clickHandler}>{this.state.count}</button></h1>
+               ); 
+           }
+       }
+            ReactDOM.render(<Counter/>, document.getElementById('pair'));
+     -->
+        
+
+
+
+        <script type="text/jsx">
+        
+       class Details extends React.Component{
+           render(){
+               return <h1>{this.props.details}</h1>
+           }
+       }
+       class Button extends React.Component{
+           render(){
+               return (
+                   <button style = {{color: this.props.active? 'red' : 'blue'}}  onClick = {()=>this.props.clickHandler(this.props.id, this.props.name)}>{this.props.name}</button>
+               );
+           }
+       }
+       class App extends React.Component{
+           constructor(props){
+               super(props)
+               this.state = {activeArray:[0,0,0,0,0], details: ""}
+               this.clickHandler = this.clickHandler.bind(this)
+           }
+
+           clickHandler(id,details){
+               let arr = [0,0,0,0,0]
+               arr[id] = 1
+               this.setState({activeArray:arr, details: details})
+           }
+
+           render(){
+               return(
+                   <div>
+                       <button id = {0} clickHandler = {this.clickHandler} active = {this.state.activeArray[0]}  name="one">one</button>
+                       <button id = {1} clickHandler = {this.clickHandler} active = {this.state.activeArray[1]}  name="two">Two</button>
+                       <button id = {2} clickHandler = {this.clickHandler} active = {this.state.activeArray[2]}  name="three">Three</button>
+                       <button id = {3} clickHandler = {this.clickHandler} active = {this.state.activeArray[3]}  name="four">Four</button>
+                       <button id = {4} clickHandler = {this.clickHandler} active = {this.state.activeArray[4]}  name="five">Five</button>
+                       <Details details = {this.state.details}/>
+                   </div>
+               );
+           }
+       }
+       ReactDOM.render(<App name/>, document.getElementById('pair'));
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

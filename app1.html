@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>App1</title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app"></div>
+
+       <script type="text/jsx">
+
+
+
+
+        class HelloWorld extends React.Component{
+            constructor(props){
+                super(props)
+               this.state = { input: ""};
+
+                this.toggleInput = this.toggleInput.bind(this);    
+
+            }
+            toggleInput(event){
+                this.setState({ input: event.target.value});
+                console.log(this.state.input);
+            }
+            render(){
+                return(
+                    <div className="content">
+                        <Message result={this.state.input} />
+                        <input onChange={this.toggleInput} value={this.state.input} />
+
+                    </div>
+                );
+                }
+            }
+            
+            class Message extends React.Component{
+                render(){
+                    return(
+                        <h1>Your new input is : {this.props.result}</h1>
+                    );
+                }
+            }
+            
+        ReactDOM.render(<HelloWorld/>, document.getElementById('app'));
+        
+
+
+
+
+       </script>
+
+    </body>
+</html>

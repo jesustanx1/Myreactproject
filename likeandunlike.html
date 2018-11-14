@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+            Like and Unlike app
+        </title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    </head>
+
+    <body>
+        <div id="icon"></div>
+        
+        <script type="text/jsx">
+
+        class Like extends React.Component{
+            constructor(props){
+                super(props)
+                this.state = { liked: 'false'}
+                this.toggleLiked = this.toggleLiked.bind(this)
+            }
+            toggleLiked(){
+                this.setState({ liked: !this.state.liked});
+
+            }
+            render(){
+
+                let name = this.props.name;
+                let txt = this.state.liked ? 'unlike':'like';
+                let color = !this.state.liked ? 'red':'black';
+                let pointer = this.state.liked ? 'pointer':'default';
+                let bold = !this.state.liked ? 'bold':'normal';
+                let emoji = this.state.liked ? '\ud83d\udc4e':'\ud83d\udc4d';
+                let emoji1 = this.state.liked ? '\ud83d\udc50' :  '\ud83d\udc4f';
+                let text = this.state.liked ?  'default': 'clap' ;
+                return(
+                    <p><span style={{ color: color, fontWeight: bold, cursor: pointer}}>{ name }</span> | <span onClick={this.toggleLiked}>{ emoji + txt}</span> | <span onClick={this.toggleLiked}>{ emoji1 + text}</span></p>
+                );
+            }
+        }
+
+        ReactDOM.render(
+           <center> <div>
+                <Like name="Javascript"/>
+
+                <Like name="HTML"/>
+
+                <Like name="CSS"/>
+
+                <Like name="FIGMA"/>
+
+                <Like name="C++"/>
+
+                <Like name="REACT"/>
+            </div> </center>,
+             document.getElementById('icon'));    
+        
+
+
+
+       
+        </script>
+    </body>
+</html>
