@@ -1,0 +1,29 @@
+body{
+    background-image: url('images/large.jpg');
+    width: 100%;
+}
+p{
+
+font-size: 65px;
+color: #43464b;
+text-align: center;
+letter-spacing: 2px;
+word-spacing: 3px;
+padding-top: 10%;
+line-height: 1;
+font-weight: 600!important;
+
+}
+span{
+    font-size: 21px;
+    line-height: 1.8;
+    color: #676769;
+    text-align: center;
+    padding-bottom: 3%;
+}
+button{
+    background-color: tomato;
+    color: white;
+    width: 15%;
+    height: 10%;
+}

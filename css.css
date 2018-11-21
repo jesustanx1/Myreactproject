@@ -1,0 +1,70 @@
+body{
+    background-color: peachpuff;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.header{
+    height: 70px;
+    background-color: violet;
+}
+.footer{
+    height: 80px;
+    background-color: grey;
+    color: black;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position:relative;
+}
+.content{
+    
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+.banner{
+    background-image: url('images/love2.jpg');
+
+}
+h1{
+color: paleturquoise;
+font-size: 150px;
+text-align: center;
+letter-spacing: 2px;
+word-spacing: 3px;
+text-shadow: 3px 2px red;
+
+}
+h2{
+    color: palegoldenrod;
+}
+p{
+color: red;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: right;
+    margin-right: 30px;
+    padding: 30px;
+    
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: slateblue;
+}
+li a:hover{
+    color: tomato;
+    
+}

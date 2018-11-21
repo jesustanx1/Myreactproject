@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Web1</title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        
+
+    </head>
+
+    <body>
+        <div id="web">
+             
+        </div>
+
+
+
+
+        <script type="text/jsx">
+            
+            class Header extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+                
+
+
+                render(){
+                    return(
+                        <div className="header">
+                            
+                               
+                                    <ul>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Gallery</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Home</a></li>
+                                    </ul>
+                               
+                        </div>
+                    );
+
+                }
+            }
+            class Banner extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+
+                render(){
+                    return(
+                        <div className="banner">
+                            <h1><b>Jesuseun Abraham</b></h1>
+                        </div>
+                    );
+                }
+            }
+            class Content extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+
+                render(){
+                    return(
+                    <div className="content">
+                    <h3>Hi Dear</h3>
+                    <p>Welcome to my new react site.</p>
+                      </div>
+                       
+                    );
+                }
+            }
+            class Footer extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+                render(){
+                    return(
+                        <div className="footer">
+                                Copyright@SeunLabs
+                        </div>
+                    );
+                }
+            }
+            class WEB extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+
+                render(){
+                    return(
+                        <div>
+                            <Header/>
+                            <Banner/>
+                            <Content/>
+                            <Footer/>
+                        </div>
+                    );
+                }
+            }
+            ReactDOM.render(
+                <div>
+                    <WEB />
+                </div>,
+            document.getElementById('web'));  
+        </script>
+    </body>
+</html>

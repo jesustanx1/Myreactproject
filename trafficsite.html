@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>traffic</title>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <link rel="stylesheet" type="text/css" href="traffic.css">
+    </head>
+
+
+
+
+    <body>
+        <div id="trafic"></div>
+
+
+        <script type="text/jsx">
+        
+        class Traffic extends React.Component{
+                constructor(props){
+                    super(props)
+                }
+
+            render(){
+                return(
+                <div className="traffic">
+                    <p>How much more traffic should <br/>you actually be getting</p>
+                    <center><span>Take my traffic quiz and get a customized advice that will walk you through how you
+                            <br/>can get more traffic and rank higher on Google in less than 30 days.</span></center>
+                            <br/>
+                            <br/>
+                            <center><a href="#"><button type="button" value="START THE QUIZ"><b>START THE QUIZ</b></button></a></center>
+                            
+                    </div> 
+                );
+            }
+        }
+        
+            ReactDOM.render(
+             <Traffic/>,
+            document.getElementById('trafic'));
+        
+        
+        </script>
+    </body>
+</html>
